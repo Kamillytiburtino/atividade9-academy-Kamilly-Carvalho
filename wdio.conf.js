@@ -57,6 +57,7 @@ exports.config = {
         automationName: "UiAutomator2",
         appPackage: "com.example.mymoviesapp", //nome do pacote do App
         app: path.join(__dirname, "app", "app.apk"),
+        path: '/wd/hub/'
     }],
     //
     // ===================
