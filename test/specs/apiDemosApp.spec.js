@@ -41,8 +41,6 @@ describe("Verifica fluxo App/Alert Dialogs/LIST DIALOG", () => {
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
-
         const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
@@ -82,8 +80,6 @@ describe("Verifica fluxo  App/Fragment/Hide and Show", () => {
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
-
         const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
@@ -125,8 +121,7 @@ describe("Verifica fluxo  App/Action Bar/Display options/DISPLAY_HOME_AS_UP", ()
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
-        const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
+       const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
     });
@@ -166,7 +161,6 @@ describe("Verifica fluxo  App/Action Bar/Display options/DISPLAY_SHOW_TITLE", ()
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
         const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
@@ -207,7 +201,6 @@ describe("Verifica fluxo  App/Action Bar/Display options/DISPLAY_SHOW_CUSTOM", (
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
         const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
@@ -248,7 +241,6 @@ describe("Verifica fluxo  App/Action Bar/Display options/DISPLAY_SHOW_NAVIGATION
     before(async () => await driver.launchApp());
 
     it("deve existir botão app", async () => {
-        await driver.launchApp();
         const visibilidade = await $('android=new UiSelector().text("App").className("android.widget.TextView")').isDisplayed();
         
         expect(visibilidade).toBe(true);
@@ -276,7 +268,7 @@ describe("Verifica fluxo  App/Action Bar/Display options/DISPLAY_SHOW_NAVIGATION
     });
 
 
-    it("deve verificar a opção NAVIGATION", async () => {
+    it("deve verificar a opção DISPLAY_SHOW_NAVIGATION", async () => {
         const visibilidade = await $('android=new UiSelector().text("App/Action Bar/Display Options").className("android.widget.TextView")').isDisplayed();
         await $("id=io.appium.android.apis:id/toggle_navigation").click();
         expect(visibilidade).toBe(true);
